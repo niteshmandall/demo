@@ -33,6 +33,18 @@ public class Patient {
 
     private String hearingStatus;
 
+    public LocalDate getDateOfBirth() {
+        return dob;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public String getEmail() {
         return email;
     }

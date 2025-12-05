@@ -9,8 +9,11 @@ import java.util.List;
 @Service
 public class PatientService {
 
-    @Autowired
-    private PatientRepository repository;
+    private final PatientRepository repository;
+
+    public PatientService(PatientRepository repository) {
+        this.repository = repository;
+    }
 
     public Patient registerPatient(Patient patient) {
         if(!repository.findByEmail(patient.getEmail()).isEmpty()) {
